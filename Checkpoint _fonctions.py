@@ -18,6 +18,9 @@ while Choix.lower() != "n":
     num1 = float(input("Entrez le premier nombre: "))
     num2 = float(input("Entrez le deuxième nombre: "))
     operation = input("Entrez l'opération (+, -, *, /): ")
+    if operation not in ["+", "-", "*", "/"]:
+        print("Opération invalide. Veuillez réessayer.")
+        continue
 
     resultat = calculatrice(num1, num2, operation)
     print(f"Résultat: {resultat}")
